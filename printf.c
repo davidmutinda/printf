@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdarg.h>
 
 /**
  * _printf - A function that prints inuts to the std output
@@ -10,5 +11,5 @@
 
 int _printf(const char *format, ...)
 {
-
+	va_list ap;
 }
