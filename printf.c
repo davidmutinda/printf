@@ -11,5 +11,14 @@
 
 int _printf(const char *format, ...)
 {
-	va_list ap;
+	int i;
+
+	i = 0;
+
+	while (format[i] != '\0')
+	{
+		_putchar(format[i]);
+		i++;
+	}
+	return (i);
 }
