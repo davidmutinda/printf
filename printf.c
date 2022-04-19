@@ -28,15 +28,12 @@ void print_string(char *p)
 
 int _printf(const char *format, ...)
 {
-	int i, num;
+	int i = 0, num = 0;
 	va_list ap;
 	char charc;
 	char *p;
 
 	va_start(ap, format);
-	i = 0;
-	num = 0;
-
 	while (format[i] != '\0')
 	{
 		if (format[i] == '%')
@@ -49,19 +46,15 @@ int _printf(const char *format, ...)
 					num -= 1;
 					_putchar(charc);
 					break;
-
 				case 's':
 					p = va_arg(ap, char*);
-					num = strlen(p);
-					num -= 2;
+					num = strlen(p) - 2;
 					print_string(p);
 					break;
-
 				case '%':
 					_putchar('%');
 					num -= 1;
 					break;
-
 				default:
 					break;
 			}
