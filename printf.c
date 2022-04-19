@@ -14,12 +14,15 @@ void print_string(char *p)
 
 	n = 0;
 	if (p == NULL)
-		exit(0);
+		;
 
-	while (p[n] != '\0')
+	else
 	{
-		_putchar(p[n]);
-		n++;
+		while (p[n] != '\0')
+		{
+			_putchar(p[n]);
+			n++;
+		}
 	}
 }
 /**
