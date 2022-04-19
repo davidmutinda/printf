@@ -1,6 +1,8 @@
 #include "main.h"
 #include <stdarg.h>
 #include <string.h>
+#include <stddef.h>
+#include <stdlib.h>
 /**
  * print_string - prints string
  * @p: string
@@ -11,6 +13,8 @@ void print_string(char *p)
 	int n;
 
 	n = 0;
+	if (p == NULL)
+		exit(0);
 
 	while (p[n] != '\0')
 	{
