@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdarg.h>
+#include <string.h>
 /**
  * print_string - prints string
  * @p: string
@@ -27,13 +28,14 @@ void print_string(char *p)
 
 int _printf(const char *format, ...)
 {
-	int i;
+	int i, num;
 	va_list ap;
 	char charc;
 	char *p;
 
 	va_start(ap, format);
 	i = 0;
+	num = 0;
 
 	while (format[i] != '\0')
 	{
@@ -44,16 +46,20 @@ int _printf(const char *format, ...)
 			{
 				case 'c':
 					charc = va_arg(ap, int);
+					num -= 1;
 					_putchar(charc);
 					break;
 
 				case 's':
 					p = va_arg(ap, char*);
+					num = strlen(p);
+					num -= 2;
 					print_string(p);
 					break;
 
 				case '%':
 					_putchar('%');
+					num -= 1;
 					break;
 
 				default:
@@ -65,5 +71,7 @@ int _printf(const char *format, ...)
 		_putchar(format[i]);
 		i++;
 	}
-	return (i);
+	num += (i - 1);
+	va_end(ap);
+	return (num);
 }
