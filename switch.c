@@ -30,13 +30,13 @@ int switch_statement(const char *format, int i, va_list ap)
 {
 	char *p;
 	char charc;
-	int num = 0;
+	int num;
 
 	switch (format[i])
 	{
 		case 'c':
 			charc = va_arg(ap, int);
-			num -= 1;
+			num = -1;
 			_putchar(charc);
 			break;
 		case 's':
@@ -48,7 +48,7 @@ int switch_statement(const char *format, int i, va_list ap)
 			break;
 		case '%':
 			_putchar('%');
-			num -= 1;
+			num = -1;
 			break;
 		default:
 			if (format[i] == '\0')
