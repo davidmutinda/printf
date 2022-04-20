@@ -1,5 +1,5 @@
 # printf
-This repo is an ALX-Group project that contains a recreation of the printf function from the standard i/o library. 
+This repo contains an ALX-Group project that involves recreation of the printf function of the standard library. 
 
 ## Requirements
 - Allowed editors: vi, vim, emacs.
