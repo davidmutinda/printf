@@ -3,5 +3,5 @@
 #include <stdarg.h>
 int _printf(const char *format, ...);
 int _putchar(char c);
-void switch_statement(const char *format, int i, int num, va_list ap);
+int switch_statement(const char *format, int i, va_list ap);
 #endif
