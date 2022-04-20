@@ -23,14 +23,14 @@ void print_string(char *p)
  * switch_statement - entry point
  * @format: string
  * @i: integer for iteration
- * @num: total number of characters printed
  * @ap: argument pointer
  * Return: void
  */
-void switch_statement(const char *format, int i, int num, va_list ap)
+int switch_statement(const char *format, int i, va_list ap)
 {
 	char *p;
 	char charc;
+	int num = 0;
 
 	switch (format[i])
 	{
@@ -57,5 +57,6 @@ void switch_statement(const char *format, int i, int num, va_list ap)
 			_putchar(format[i]);
 			break;
 	}
+	return (num);
 
 }
