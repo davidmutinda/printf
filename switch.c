@@ -10,17 +10,17 @@
  */
 int itoa(int k)
 {
-	int i, j, n, div;
+	int i, j, n = 0, div;
 
 	if (k < 0)
 	{
 		_putchar('-');
 		k *= -1;
+		n += 1;
 	}
 	j = k;
 	for (i = 1; j > 9; i *= 10, j /= 10)
 		;
-	n = 0;
 	while (i >= 1)
 	{
 		div = k / i;
