@@ -24,7 +24,7 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
-			switch_statement(format, i, num, ap);
+			num = switch_statement(format, i, ap);
 		}
 		else
 			_putchar(format[i]);
