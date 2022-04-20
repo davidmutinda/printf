@@ -10,11 +10,11 @@ Formating options are used to print the various data types. For example:
 
 In order to use this function, the prototype declaration should be:
 
-int _printf(const char *format, ...);*
+* int _printf(const char *format, ...);
 
 The function can be called as follows:
 
-_printf("Complete the sentence: You %s nothing, Jon Snow.\n", (char *)0);*
+* _printf("Complete the sentence: You %s nothing, Jon Snow.\n", (char *)0);
 
 The output of the function call will be:
 
