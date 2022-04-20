@@ -49,10 +49,8 @@ int switch_statement(const char *format, int i, va_list ap)
 
 		case 'i':
 			integer = va_arg(ap, int);
-			if (decimal != NULL)
-				print_string(integer);
-			num = strlen(integer) - 1;
 			break;
+
 		case '%':
 			_putchar('%');
 			num = -1;
