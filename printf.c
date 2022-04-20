@@ -61,6 +61,7 @@ int _printf(const char *format, ...)
 					num -= 1;
 					break;
 				default:
+					exit(0);
 					break;
 			}
 			i++;
