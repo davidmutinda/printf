@@ -53,7 +53,7 @@ int _printf(const char *format, ...)
 				case 's':
 					p = va_arg(ap, char*);
 					if (p == NULL)
-						p = "(null)";
+						p = "(nul)";
 					num = strlen(p) - 2;
 					print_string(p);
 					break;
