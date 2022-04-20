@@ -30,7 +30,7 @@ int switch_statement(const char *format, int i, va_list ap)
 {
 	char *p;
 	char charc;
-	int num;
+	int num, decimal, integer;
 
 	switch (format[i])
 	{
