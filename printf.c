@@ -20,6 +20,8 @@ void print_string(char *p)
 		n++;
 	}
 }
+
+
 /**
  * _printf - A function that prints inuts to the std output
  * @format: Format by which to print the characters passed to function
@@ -32,8 +34,6 @@ int _printf(const char *format, ...)
 {
 	int i = 0, num = 0;
 	va_list ap;
-	char charc;
-	char *p;
 
 	if (format == NULL)
 		exit(0);
@@ -71,7 +71,8 @@ int _printf(const char *format, ...)
 			i++;
 			continue;
 		}
-		_putchar(format[i]);
+		else
+			_putchar(format[i]);
 		i++;
 	}
 	num += i;
