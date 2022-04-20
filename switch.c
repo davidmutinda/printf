@@ -28,7 +28,7 @@ void print_string(char *p)
  */
 int switch_statement(const char *format, int i, va_list ap)
 {
-	char *p;
+	char *p, *dec, *integs;
 	char charc;
 	int num, decimal, integer;
 
@@ -48,13 +48,15 @@ int switch_statement(const char *format, int i, va_list ap)
 			break;
 		case 'i':
 			integer = va_arg(ap, int);
-			num = strlen(integer) - 2;
-			print_numbers(integer); /* function to print number (to be written) */
+			integs = itoa(integer);
+			num = strlen(integs) - 2;
+			print_numbers(integs); /* function to print number (to be written) */
 			break;
 		case 'd':
 			decimal = va_arg(ap, int);
-			num = strlen(integer) - 2;
-			print_numbers(integer); /* function to print number (to be written) */
+			dec = itoa(decimal);
+			num = strlen(dec) - 2;
+			print_numbers(dec); /* function to print number (to be written) */
 			break;
 		case '%':
 			_putchar('%');
