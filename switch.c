@@ -4,6 +4,34 @@
 #include <stdlib.h>
 #include <stddef.h>
 /**
+ * itoa -converts integer to string
+ * @k: integer
+ * Return: string
+ */
+int itoa(int k)
+{
+	int i, j, n, div;
+
+	if (k < 0)
+	{
+		_putchar('-');
+		k *= -1;
+	}
+	j = k;
+	for (i = 1; j > 9; i *= 10, j /= 10)
+		;
+	n = 0;
+	while (i >= 1)
+	{
+		div = k / i;
+		_putchar(div + '0');
+		k %= i;
+		i /= 10;
+		n++;
+	}
+	return (n);
+}
+/**
  * print_string - prints string
  * @p: string
  * Return: void
@@ -28,7 +56,7 @@ void print_string(char *p)
  */
 int switch_statement(const char *format, int i, va_list ap)
 {
-	char *p, *dec, *integs;
+	char *p;
 	char charc;
 	int num, decimal, integer;
 
@@ -48,15 +76,11 @@ int switch_statement(const char *format, int i, va_list ap)
 			break;
 		case 'i':
 			integer = va_arg(ap, int);
-			integs = itoa(integer);
-			num = strlen(integs) - 2;
-			print_numbers(integs); /* function to print number (to be written) */
+			num = itoa(integer) - 2;
 			break;
 		case 'd':
 			decimal = va_arg(ap, int);
-			dec = itoa(decimal);
-			num = strlen(dec) - 2;
-			print_numbers(dec); /* function to print number (to be written) */
+			num = itoa(decimal) - 2;
 			break;
 		case '%':
 			_putchar('%');
