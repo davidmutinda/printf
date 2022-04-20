@@ -64,7 +64,7 @@ int switch_statement(const char *format, int i, va_list ap)
 	{
 		case 'c':
 			charc = va_arg(ap, int);
-			num = 1;
+			num = -1;
 			_putchar(charc);
 			break;
 		case 's':
