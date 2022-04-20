@@ -36,19 +36,24 @@ int switch_statement(const char *format, int i, va_list ap)
 	{
 		case 'c':
 			charc = va_arg(ap, int);
-			num = -1;
+			num = 1;
 			_putchar(charc);
 			break;
 		case 's':
 			p = va_arg(ap, char*);
+			if (p == NULL)
+				p = "(null)";
+			print_string(p);
+			num = strlen(p) - 2;
 			break;
-
 		case 'd':
 			decimal = va_arg(ap, int);
+			num = 2;
 			break;
 
 		case 'i':
 			integer = va_arg(ap, int);
+			num = 2;
 			break;
 
 		case '%':
