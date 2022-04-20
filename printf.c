@@ -61,7 +61,10 @@ int _printf(const char *format, ...)
 					num -= 1;
 					break;
 				default:
-					exit(0);
+					if (format[i] == '\0')
+						exit(0);
+					_putchar('%');
+					_putchar(format[i]);
 					break;
 			}
 			i++;
