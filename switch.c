@@ -46,16 +46,16 @@ int switch_statement(const char *format, int i, va_list ap)
 			print_string(p);
 			num = strlen(p) - 2;
 			break;
-		case 'd':
-			decimal = va_arg(ap, int);
-			num = 2;
-			break;
-
 		case 'i':
 			integer = va_arg(ap, int);
-			num = 2;
+			num = strlen(integer) - 2;
+			print_numbers(integer); /* function to print number (to be written) */
 			break;
-
+		case 'd':
+			decimal = va_arg(ap, int);
+			num = strlen(integer) - 2;
+			print_numbers(integer); /* function to print number (to be written) */
+			break;
 		case '%':
 			_putchar('%');
 			num = -1;
