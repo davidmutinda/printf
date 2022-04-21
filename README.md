@@ -1,10 +1,10 @@
 # printf
-This repo contains an ALX-Group project that involves recreation of the printf function of the standard library.
+This repo contains an ALX-Group project that involved recreation of the printf function of the standard library.
 
 The __printf function is used to print all data types (which are passed as arguments) when the program is compiled. 
 Formating options are used to print the various data types. For example:
 * %d prints a decimal number
-* %i prints a string
+* %i prints an integer
 * %c prints a character
 * %s prints a string
 
