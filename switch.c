@@ -8,9 +8,10 @@
  * @k: integer
  * Return: string
  */
-int itoa(int k)
+int itoa(long int k)
 {
-	int i, j, n = 0, div;
+	int div, i, n = 0;
+	long int j;
 
 	if (k < 0)
 	{
